@@ -1,7 +1,7 @@
 {
   "name": "@antsask/website",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "private": true,
   "repository": "git@github.com:AnTSaSk/Portfolio.git",
   "author": "Alexis Besson <alexis.bessonweb@gmail.com>",
