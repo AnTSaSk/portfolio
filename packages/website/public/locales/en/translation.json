@@ -23,12 +23,12 @@
       },
       "title": {
         "generic": "Alexis Besson's portfolio • Lead Front-end Develop",
-        "landing": "@:seo.meta.variable.default Lead Front-end Developer"
+        "landing": "Alexis Besson • Lead Front-end Developer"
       },
       "variable": {
-        "after": "{'•'} Alexis Besson",
-        "default": "Alexis Besson {'•'} ",
-        "long": "Alexis Besson, Lead Front-end Developer {'•'} "
+        "after": "• Alexis Besson",
+        "default": "Alexis Besson • ",
+        "long": "Alexis Besson, Lead Front-end Developer • "
       }
     }
   },

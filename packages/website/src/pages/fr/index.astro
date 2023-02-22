@@ -1,0 +1,25 @@
+---
+import { t, changeLanguage } from 'i18next';
+// Layouts
+import LandingLayout from '@/layouts/Landing/index.astro';
+// SVG
+import Logo from '@/assets/images/logo.svg';
+// CSS
+import '../style.scss';
+
+changeLanguage('fr');
+---
+
+<LandingLayout
+    title={t('seo.meta.title.landing')}
+    description={t('seo.meta.description.landing')}
+>
+    <div class="o-landing">
+        <img src={Logo} class="a-logo" />
+
+        <div class="o-landing__content">
+            <h1 class="o-landing__title">Alexis Besson</h1>
+            <h2 class="o-landing__subtitle">{t('view.landing.subtitle')}</h2>
+        </div>
+    </div>
+</LandingLayout>

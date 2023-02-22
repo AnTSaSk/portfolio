@@ -1,11 +1,9 @@
-import { useI18n } from 'vue-i18n';
+import { t } from 'i18next';
 
 /**
  * logDecoration
  */
 export const logDecoration = () => {
-  const { t } = useI18n();
-
   const message = `
   Hello There ! 👋\n
   ${t('easteregg.log.message')}\n

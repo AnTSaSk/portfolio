@@ -29,6 +29,15 @@ lerna-debug.log*
 !/dist/.htaccess
 dist-ssr
 
+# Yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Misc
 node_modules
 *.local
