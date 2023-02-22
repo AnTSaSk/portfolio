@@ -5,7 +5,7 @@ import { HeadHrefLangs } from 'astro-i18next/components';
 
 // Utils
 import { logDecoration } from '@/utils/easteregg';
-import { getCurrentUrl } from '@/utils/seo';
+// import { getCurrentUrl } from '@/utils/seo';
 
 // CSS
 import './style.scss';
@@ -23,7 +23,22 @@ const {
 const currentUrl = Astro.site.toString();
 
 // Easteregg
-// logDecoration();
+logDecoration();
+
+/********************/
+/**** SCHEMA.ORG ****/
+/********************/
+const schemaOrg = {
+    '@context': 'https://schema.org/',
+    '@type': 'Person',
+    name: 'Alexis Besson',
+    sameAs: [
+        'https://twitter.com/AlexisBessonWeb',
+        'https://www.linkedin.com/in/alexis-besson-web/',
+        'https://github.com/AnTSaSk',
+    ],
+    jobTitle: 'Lead Front-end Developer',
+};
 ---
 
 <html lang={i18next.language}>
@@ -76,18 +91,7 @@ const currentUrl = Astro.site.toString();
         <main class="t-page -landing">
             <slot />
         </main>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org/",
-                "@type": "Person",
-                "name": "Alexis Besson",
-                "sameAs": [
-                    "https://twitter.com/AlexisBessonWeb",
-                    "https://www.linkedin.com/in/alexis-besson-web/",
-                    "https://github.com/AnTSaSk"
-                ],
-                "jobTitle": "Lead Front-end Developer"
-            }
-        </script>
+        <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)}
+        ></script>
     </body>
 </html>
