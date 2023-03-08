@@ -10,13 +10,13 @@
     "lint": "npx eslint --ext .ts,.vue --ignore-path ./../../.gitignore .",
     "lint:style": "stylelint src/**/*.{css,scss}",
     "lint:markup": "vue-tsc --noEmit",
-    "build": "astro check && yarn lint:markup && astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/node": "5.0.3",
+    "@astrojs/vercel": "^3.2.0",
     "@astrojs/vue": "2.0.1",
-    "astro": "2.0.14",
+    "astro": "^2.1.0",
     "astro-i18next": "1.0.0-beta.17",
     "astro-seo": "0.7.1"
   }

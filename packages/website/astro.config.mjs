@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
 import vue from '@astrojs/vue';
 import astroI18next from 'astro-i18next';
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,12 +14,10 @@ export default defineConfig({
 
   // Output config
   output: 'server',
-  outdir: '../../dist/website',
+  // outdir: '../../dist/website',
   site: 'https://alexis-besson.dev',
 
-  adapter: node({
-    mode: 'standalone',
-  }),
+  adapter: vercel(),
 
   // Enable Vue to support Vue components.
   integrations: [astroI18next(), vue()],
@@ -34,9 +32,9 @@ export default defineConfig({
         scss: {
           quietDeps: true,
           additionalData: `
-          @use 'sass:math';
-          @import "./src/assets/scss/index.scss";
-        `,
+            @use 'sass:math';
+            @import "./src/assets/scss/index.scss";
+          `,
         },
       },
     },
