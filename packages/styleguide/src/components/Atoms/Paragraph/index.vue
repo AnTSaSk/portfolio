@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="`a-heading -${variant}`">
+  <component :is="tag" :class="`a-paragraph -${variant}`">
     <slot />
   </component>
 </template>
@@ -18,8 +18,8 @@
   }
 
   withDefaults(defineProps<Props>(), {
-    tag: 'h1',
-    variant: 'h1Regular',
+    tag: 'p',
+    variant: 'b1SemiBold',
   });
 </script>
 
